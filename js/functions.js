@@ -1236,27 +1236,27 @@ jQuery($=> {
         layoutMode: 'grid',
         defaultFilter: "*",
         animationType: "rotateSides",
-        gapHorizontal: 0,
-        gapVertical: 0,
+        gapHorizontal: 4,
+        gapVertical: 4,
         gridAdjustment: 'responsive',
         mediaQueries: [{
             width: 1500,
-            cols: 3,
+            cols: 4,
         }, {
             width: 1100,
-            cols: 3,
+            cols: 4,
         }, {
             width: 767,
-            cols: 2,
+            cols: 3,
         }, {
             width: 480,
-            cols: 1,
+            cols: 2,
         }],
         plugins: {
             loadMore: {
                 element: '#js-loadMore-mosaic',
                 action: 'click',
-                loadItems: 3,
+                loadItems: 4,
             }
         },
     });
