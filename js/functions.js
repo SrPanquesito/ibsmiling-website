@@ -797,13 +797,13 @@ jQuery($=> {
 
     /*Our Team*/
     $("#ourteam-slider").owlCarousel({
-        items: 4,
+        items: 3,
         margin: 0,
         dots: false,
         nav: false,
         responsive: {
             1280: {
-                items: 4,
+                items: 3,
             },
             768: {
                 items: 3,
