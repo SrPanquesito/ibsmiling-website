@@ -665,6 +665,21 @@ jQuery($=> {
             'close'
         ],
     });
+    $('[imgs-fancybox]').fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 600,
+        'speedOut': 200,
+        buttons: [
+            'slideShow',
+            'fullScreen',
+            'thumbs',
+            'share',
+            // 'download',
+            'zoom',
+            'close'
+        ],
+    });
 
 
     /* ------ OWL Slider ------ */
@@ -1152,32 +1167,32 @@ jQuery($=> {
         }],
     });
     /*services*/
-    $("#services-measonry").cubeportfolio({
-        layoutMode: 'grid',
+    $("#imgs-masonry").cubeportfolio({
+        layoutMode: 'masonry',
         defaultFilter: '*',
         filters: '#services-filter',
         animationType: "scaleSides",
-        gapHorizontal: 30,
-        gapVertical: 30,
+        gapHorizontal: 0,
+        gapVertical: 0,
         gridAdjustment: "responsive",
         mediaQueries: [{
             width: 1500,
-            cols: 3
+            cols: 5
         }, {
             width: 1100,
-            cols: 3
+            cols: 5
         }, {
             width: 992,
-            cols: 3
+            cols: 5
         }, {
             width: 768,
-            cols: 2
+            cols: 5
         }, {
             width: 480,
-            cols: 1
+            cols: 2
         }, {
             width: 320,
-            cols: 1,
+            cols: 2,
         }],
     });
 
