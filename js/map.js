@@ -1,7 +1,7 @@
 /* ----- Google Map ----- */
 if ($("#map").length) {
     function initialize() {
-        var myLatLng = {lat: 32.5766327, lng: -117.1063436};
+        var myLatLng = {lat: 32.5766786, lng: -117.1049608};
         var mapOptions = {
             zoom: 15,
             center: myLatLng,
@@ -165,15 +165,36 @@ if ($("#map").length) {
               ]
             };
 
+
+        const contentString =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h3 id="firstHeading" class="firstHeading">Imperial Beach Smiling</h3>' +
+            '<br/><div id="bodyContent">' +
+            "<p>At <b>I.B. Smiling</b> we can help you regain your smile confidence back, " +
+            "with our California most certified dentists and high-quality treatments. " +
+            "We are expertise’s in a wide range of dental treatments, from a simple tooth extraction, " +
+            "veneers or even more complex procedures. " +
+            "</p>" +
+            "</div>" +
+            "</div>";
+    
+        const infowindow = new google.maps.InfoWindow({
+            content: contentString,
+        });
+
         var map = new google.maps.Map(document.getElementById('map'),
             mapOptions);
         var marker = new google.maps.Marker({ 
-            position: {lat: 32.5766327, lng: -117.1063436},
+            position: {lat: 32.5766786, lng: -117.1049608},
             icon: 'images/location-pin.png', //if u want custom
             animation: google.maps.Animation.DROP,
             map: map,
-            title:"Imperial Beach Dental"
+            title:"Imperial Beach Smiling"
         });
+
+        infowindow.open(map, marker);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 }
